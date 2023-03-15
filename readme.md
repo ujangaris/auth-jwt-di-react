@@ -27,3 +27,10 @@
 
     Todo :
     1.  context/AuthContext.js
+
+## Membuat function Login dan Logout
+
+    Todo :
+    1.  context/AuthContext.js
+        - login
+        - logout
