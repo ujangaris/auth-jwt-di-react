@@ -55,4 +55,19 @@ class AuthContext extends Component {
   }
 }
 
+// higher order component
+export const withAuth = (WrappedComponent) => {
+  return class extends Component {
+    render() {
+      return (
+        <AuthContext.Consumer>
+          {(context) => {
+            ;<WrappedComponent {...this.props} {...context} />
+          }}
+        </AuthContext.Consumer>
+      )
+    }
+  }
+}
+
 export default AuthContext

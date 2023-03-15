@@ -34,3 +34,9 @@
     1.  context/AuthContext.js
         - login
         - logout
+
+## Consumer context di dalam higher order component
+
+    Todo :
+    1.  context/AuthContext.js
+        - higher order component
