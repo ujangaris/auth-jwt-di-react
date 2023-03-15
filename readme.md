@@ -60,3 +60,20 @@
         - lakukan login sambil dibuka consolenya,
         - jika setup yang kita lakukan berhasil akan ada data yang isinya
           message,success, dan token
+
+## Halaman Profile saat berhasil login
+
+    Todo :
+    1.  components/Profile.js
+        - membuat halaman profile
+    2.  App.js
+        - import dan pasang {BrowserRouter, Routes, Route}
+        - import dan pasang Profile
+    3.  AuthContext.js
+        - lakukan penambahan code pada login
+        - redirect halaman profile jika success login
+    4.  pengujian pada browser:
+        - http://localhost:3000
+        - lakukan login dengan user yang terdaftar
+        - jika berhasil akan redirect ke halaman profile
+        - dan datanya tampil

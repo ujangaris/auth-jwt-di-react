@@ -9,7 +9,7 @@ export class AuthContextProvider extends Component {
     super()
     this.state = {
       users: [],
-      user: JSON.parse(localStorage.getItem('user')) || {},
+      user: localStorage.getItem('user') || {},
       token: localStorage.getItem('token') || '',
       isLoggedIn: localStorage.getItem('user') === null ? false : true,
     }
@@ -21,14 +21,19 @@ export class AuthContextProvider extends Component {
       .post('http://localhost:4000/api/login', credentials)
       .then((res) => {
         const { token } = res.data
+        let user = credentials.email
+
         localStorage.setItem('token', token)
+        localStorage.setItem('user', user)
 
         this.setState({
           token,
           isLoggedIn: true,
           user: res.data.user,
         })
-        return console.log(res)
+        // return console.log(res)
+        // redirect halaman profile jika success login
+        window.location.href = '/profile'
       })
   }
   // logout
