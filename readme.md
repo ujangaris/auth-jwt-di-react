@@ -22,3 +22,8 @@
 
     2.  App.js
         - import dan pasang Login
+
+## Membuat context provider untuk auth
+
+    Todo :
+    1.  context/AuthContext.js
