@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { withAuth } from '../context/AuthContext'
+import StatusButton from './StatusButton'
 
 class Profile extends Component {
   componentDidMount() {
@@ -9,6 +10,8 @@ class Profile extends Component {
     return (
       <div>
         <h2>Halaman Profile : {this.props.user.email}</h2>
+        <hr />
+        <StatusButton />
       </div>
     )
   }

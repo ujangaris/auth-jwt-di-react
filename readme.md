@@ -117,3 +117,20 @@
         - dan datanya tampil
         - jika sudah login tidak bisa akses halaman login
         - jika belum login tidak bisa akses halaman profile
+
+## Logout react auth
+
+    Todo :
+    1.  components/StatusButton.js
+        - functioinal component StatusButton
+    2.  component/profile.js
+        - import dan pasang StatusButton
+    3.  pengujian pada browser:
+        - http://localhost:3000
+        - lakukan login dengan user yang terdaftar
+        - jika berhasil akan redirect ke halaman profile
+        - dan datanya tampil
+        - jika sudah login tidak bisa akses halaman login
+        - jika belum login tidak bisa akses halaman profile
+        - klik button logout, jika setup yang kita lakukan berhasil
+          maka akan diredirect ke halaman login.
