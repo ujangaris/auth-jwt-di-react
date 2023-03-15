@@ -9,7 +9,7 @@ export class AuthContextProvider extends Component {
     super()
     this.state = {
       users: [],
-      user: localStorage.getItem('user') || {},
+      user: localStorage.getItem('user') || '',
       token: localStorage.getItem('token') || '',
       isLoggedIn: localStorage.getItem('user') === null ? false : true,
     }
@@ -31,9 +31,9 @@ export class AuthContextProvider extends Component {
           isLoggedIn: true,
           user: res.data.user,
         })
-        // return console.log(res)
+        return console.log(res)
         // redirect halaman profile jika success login
-        window.location.href = '/profile'
+        // window.location.href = '/profile'
       })
   }
   // logout

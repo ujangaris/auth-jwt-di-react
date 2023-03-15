@@ -1,5 +1,6 @@
 // rcc
 import React, { Component } from 'react'
+import { Navigate } from 'react-router-dom'
 import { withAuth } from '../context/AuthContext'
 
 class Login extends Component {
@@ -22,6 +23,9 @@ class Login extends Component {
     this.props.login(this.state)
   }
   render() {
+    if (this.props.isLoggedIn) {
+      return <Navigate to='/profile' />
+    }
     return (
       <div>
         {/* buat sebuah form yang didaamnya terdapat input email dan password */}

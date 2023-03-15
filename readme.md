@@ -77,3 +77,26 @@
         - lakukan login dengan user yang terdaftar
         - jika berhasil akan redirect ke halaman profile
         - dan datanya tampil
+
+## Halaman hanya dapat diakses setelah Login
+
+    Todo :
+    1.  components/ProtectedRoute.js
+    2.  App.js
+        - import dan pasang ProtectedRoute
+
+    3.  component/Login.js
+        - import dan pasang Navigate dari react-router-dom
+          untuk proteksi halaman ketika sudah login
+          (halaman login tidak bisa diakses dan akan diredirect kehalaman /profile)
+    4.  context/AuthContext.js
+        - pada bagian user localStorage rubah dari object menjadi string
+    5.  components/Profile.js
+        - rubah props menjadi user
+    6.  pengujian pada browser:
+        - http://localhost:3000
+        - lakukan login dengan user yang terdaftar
+        - jika berhasil akan redirect ke halaman profile
+        - dan datanya tampil
+        - jika sudah login tidak bisa akses halaman login
+        - jika belum login tidak bisa akses halaman profile
