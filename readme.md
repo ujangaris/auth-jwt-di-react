@@ -40,3 +40,23 @@
     Todo :
     1.  context/AuthContext.js
         - higher order component
+
+## menggunakan HOC dan contect di component
+
+    Todo :
+    1.  components/Login.js
+        - method login
+        - import withAuth
+        - bungkus Login dengan withAuth
+    2.  context/AuthContext.js
+        - rubah nama class menjadi AuthContextProvider
+    3.  App.js
+        - import dan pasang AuthContextProvider
+    4.  jalankan server:
+        cd backend : nodemon server.js
+    5.  jalankan aplication:
+        cd frontend : npm start
+    6.  pengujian pada browser: http://localhost:3000
+        - lakukan login sambil dibuka consolenya,
+        - jika setup yang kita lakukan berhasil akan ada data yang isinya
+          message,success, dan token

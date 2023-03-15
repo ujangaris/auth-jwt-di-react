@@ -1,5 +1,6 @@
 // rcc
 import React, { Component } from 'react'
+import { withAuth } from '../context/AuthContext'
 
 class Login extends Component {
   // membuat state yang menyimpan data object
@@ -18,11 +19,12 @@ class Login extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     // metode login
+    this.props.login(this.state)
   }
   render() {
     return (
       <div>
-      {/* buat sebuah form yang didaamnya terdapat input email dan password */}
+        {/* buat sebuah form yang didaamnya terdapat input email dan password */}
         <form onSubmit={this.handleSubmit}>
           <input
             type='text'
@@ -45,4 +47,4 @@ class Login extends Component {
   }
 }
 
-export default Login
+export default withAuth(Login)

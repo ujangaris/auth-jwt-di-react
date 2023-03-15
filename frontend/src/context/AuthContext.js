@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 const axiosReq = axios.create()
-// const AuthContext = React.createContext()
-class AuthContext extends Component {
+const AuthContext = React.createContext()
+
+export class AuthContextProvider extends Component {
   constructor() {
     super()
     this.state = {
@@ -27,7 +28,7 @@ class AuthContext extends Component {
           isLoggedIn: true,
           user: res.data.user,
         })
-        return res
+        return console.log(res)
       })
   }
   // logout
@@ -61,13 +62,9 @@ export const withAuth = (WrappedComponent) => {
     render() {
       return (
         <AuthContext.Consumer>
-          {(context) => {
-            ;<WrappedComponent {...this.props} {...context} />
-          }}
+          {(context) => <WrappedComponent {...this.props} {...context} />}
         </AuthContext.Consumer>
       )
     }
   }
 }
-
-export default AuthContext
