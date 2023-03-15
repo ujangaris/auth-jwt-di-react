@@ -100,3 +100,20 @@
         - dan datanya tampil
         - jika sudah login tidak bisa akses halaman login
         - jika belum login tidak bisa akses halaman profile
+
+## Akses endpoint dengan token
+
+    Todo :
+    1.  context/AuthContext.js
+        - configurasi untuk axios
+        - merubah dari user ke token untuk data localStorage
+    2.  component/Profile.js
+        - merubah function component menjadi class component
+        - memasang componentDidMount
+    3.  pengujian pada browser:
+        - http://localhost:3000
+        - lakukan login dengan user yang terdaftar
+        - jika berhasil akan redirect ke halaman profile
+        - dan datanya tampil
+        - jika sudah login tidak bisa akses halaman login
+        - jika belum login tidak bisa akses halaman profile
